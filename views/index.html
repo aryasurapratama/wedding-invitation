@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="name">
+            <div class="detail">
+                <h1>Arya</h1>
+                <h1>&</h1>
+                <h1>Diah</h1>
+            </div>
+        </div>
+
+        <div class="date">
+            <p>Minggu, 01 Januari 2028</p>
+        </div>
+
+        <div class="username">
+            <p>To:Kadek deva agasta</p>
+            <p><b id="user"></b></p>
+        </div><br><br>
+
+        <div class="cta primary">
+            <a href="content.ejs">buka undangan</a>
+        </div>
+    </div>
+    <script>
+         const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const username = urlParams.get('to')
+document.getElementById("user").innerHTML = username;
+    </script>
+</body>
+</html>
